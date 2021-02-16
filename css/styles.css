@@ -1,0 +1,75 @@
+* {  --ion-font-family: 'Lato', sans-serif;
+}
+
+ion-content{
+    --background:linear-gradient(to right,#F7F7F7 50%, #ffffff 0%);
+}
+
+.dice{
+position: relative;
+height: 150px;
+width: 150px;
+background: #FFFFFF;
+box-shadow: 1px 1px 15px 5px #727272;
+margin: auto;
+}
+
+
+.dot{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #E55049; 
+}
+
+.one{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+.tr-one{
+    position: absolute;
+    margin: 30px;
+    top: 0;
+    right: 0;
+
+}
+.bl-one{
+    position: absolute;
+    margin: 30px;
+    left: 0;
+    bottom: 0;
+
+}
+.br-one{
+    position: absolute;
+    margin: 30px;
+    right: 0;
+    bottom: 0;
+
+}
+.tl-one{
+    position: absolute;
+    margin: 30px;
+    top: 0;
+    left: 0;
+
+}
+.ml-one{
+    position: absolute;
+    margin-left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mr-one{
+    position: absolute;
+    margin-right: 30px;
+    right:0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
