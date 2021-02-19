@@ -10,7 +10,7 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -18,39 +18,82 @@
     <ion-app>
         <ion-content>
             <ion-grid>
+
                 <ion-row>
-                    <ion-col>
-                        <h1 class="ion-text-center">NEW GAME</h1>
+                    <!-- PLAYER 1 COL-->
+                    <ion-col size="12" size-lg="6" class="playerone">
+
+                        <ion-row class="row_score ion-align-items-center">
+                            <ion-col size="6" size-lg="12">
+                                <h1 class="ion-text-center player">PLAYER 1</h1>
+                                <p class="ion-text-center score">72</p>
+                            </ion-col>
+
+                            <ion-col size="6" size-lg="12">
+                                <div class="score-wrapper ion-text-center">
+                                    <h1 class="title-current">CURRENT</h1>
+                                    <p class="score-current">11</p>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+
                     </ion-col>
+                    <!-- PLAYER 1 COL-->
+
+
+                    <!-- PLAYER 2 COL-->
+                    <ion-col size="12" size-lg="6" class="playertwo">
+                        <ion-row class="row_score ion-align-items-center">
+                            <ion-col size="6" size-lg="12">
+                                <h1 class="ion-text-center player">PLAYER 2</h1>
+                                <p class="ion-text-center score">50</p>
+                            </ion-col>
+                            <ion-col size="6" size-lg="12">
+                                <div class="score-wrapper ion-text-center">
+                                    <h1 class="title-current">CURRENT</h1>
+                                    <p class="score-current">11</p>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                    <!-- PLAYER 2 COL-->
+
+
+
+
                 </ion-row>
-                <ion-row>
-                    <ion-col size="4">
-                        <h1 class="ion-text-center">PLAYER ONE</h1>
-                    </ion-col>
-                    <ion-col>
-                        <h1 class="ion-text-center"></h1>
-                    </ion-col>
-                    <ion-col size="4">
-                        <h1 class="ion-text-center">PLAYER TWO</h1>
-                    </ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col size="4">
-                        <h1 class="ion-text-center">43</h1>
-                    </ion-col>
+
+                <!-- ROW 1 NEW GAME-->
+
+
+
+
+                <div class="dice-roll">
+                    <div class="dice ion-text-center">
+                        <div id="side6">
+                            <div class="dot ml-one"></div>
+                            <div class="dot mr-one"></div>
+                            <div class="dot tl-one"></div>
+                            <div class="dot tr-one"></div>
+                            <div class="dot br-one"></div>
+                            <div class="dot bl-one"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
                     <ion-col size='4'>
-
+                    
                         <div class="dice ion-text-center">
-                            <!-- <div class="side one">
-                              <div class="dot one"></div>
-                            </div>-->
 
-                            <!--
-                            <div class="side two">
+                            <div class="side1">
+                                <div class="dot one"></div>
+                            </div>
+                            <div class="side2">
                                 <div class="dot t-one"></div>
                                 <div class="dot b-one"></div>
                             </div>
-                            <div class="side three">
+                            <div class="side3">
                                 <div class="dot one"></div>
                                 <div class="dot tr-one"></div>
                                 <div class="dot bl-one"></div>
@@ -60,7 +103,7 @@
                                 <div class="dot tr-one"></div>
                                 <div class="dot br-one"></div>
                                 <div class="dot bl-one"></div>
-                            </div>                        
+                            </div>
                             <div id="side5">
                                 <div class="dot one"></div>
                                 <div class="dot tl-one"></div>
@@ -68,27 +111,71 @@
                                 <div class="dot br-one"></div>
                                 <div class="dot bl-one"></div>
                             </div>
-                        -->
-                            <div id="side6">
-                                <div class="dot ml-one"></div>
-                                <div class="dot mr-one"></div>
-                                <div class="dot tl-one"></div>
-                                <div class="dot tr-one"></div>
-                                <div class="dot br-one"></div>
-                                <div class="dot bl-one"></div>
-                            </div>
+
+
 
 
 
                         </div>
                     </ion-col>
-                    <ion-col size="4">
-                        <h1 class="ion-text-center">72</h1>
+                    -->
+
+
+
+                <!-- ROW 3  CURRENT SCORE
+                <ion-row class="ion-align-items-center row_current">
+                    <ion-col size="12" size-xl="4">
+                        <div class="score-wrapper ion-text-center">
+                            <h1 class="title-current">CURRENT</h1>
+                            <p class="score-current">11</p>
+                        </div>
+
+                    </ion-col>
+                    <ion-col size='4'>
+                        <div class="ion-text-center btn">
+                            <ion-icon name="sync-outline"></ion-icon>
+                            <p>ROLL DICE</p>
+                        </div>
+                        <div class="ion-text-center btn">
+                            <ion-icon name="download-outline"></ion-icon>
+                            <p>HOLD</p>
+                        </div>
+
+                    </ion-col>
+                    <ion-col size="12" size-xl="4">
+                        <div class="score-wrapper ion-text-center">
+                            <h1 class="title-current">CURRENT</h1>
+                            <p class="score-current">11</p>
+                        </div>
                     </ion-col>
                 </ion-row>
+-->
+
             </ion-grid>
+
+
         </ion-content>
 
+        <ion-tabs>
+
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button tab="tab-schedule">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    <ion-label>NEW GAME</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button tab="tab-speaker">
+                    <ion-icon name="sync-outline"></ion-icon>
+                    <ion-label>ROLL DICE</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button tab="tab-map">
+                    <ion-icon name="download-outline"></ion-icon>
+                    <ion-label>HOLD</ion-label>
+                </ion-tab-button>
+            </ion-tab-bar>
+
+        </ion-tabs>
     </ion-app>
 </body>
 

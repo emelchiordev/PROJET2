@@ -1,25 +1,129 @@
-* {  --ion-font-family: 'Lato', sans-serif;
+* {  
+    --ion-font-family: 'Lato', sans-serif;
+    --primary-color:#E55049;
+    padding: 0;
+
 }
 
-ion-content{
-    --background:linear-gradient(to right,#F7F7F7 50%, #ffffff 0%);
-}
+@media screen and (min-width: 0px) {
+    ion-row {
+      font-size: 0.4rem;
+    }
+    .playerone{
+        background-color: #F7F7F7;
+        min-height: 50vh;
+    }
+    .playertwo{
+        background-color: #FFFFFF;
+        min-height: 50vh;
+        }
+        .score-wrapper{
+            margin: auto;
+            width: 100px;
+            font-size: 0.8rem;
+            height: 75px;
+            background-color: var(--primary-color);
+        }
+        .dice{
+            position: relative;
+            height: 65px;
+            width: 65px;}
+            .dot{
+                height: 8px;
+                width: 8px;
+            }
+            .dice-roll{
+                position: fixed;
+                margin: 1rem;
+                right: 0;
+                bottom: 1rem;
+                transform: translateY(-50%);
+            }
+        
+
+  }
+
+  @media screen and (min-width: 576px) {
+    ion-row {
+      font-size: 0.6rem;
+    }
+    .score-wrapper{
+        margin: auto;
+        width: 120px;
+        font-size: 0.8rem;
+        height: 85px;
+        background-color: var(--primary-color);
+    }        
+    .dice{
+        position: relative;
+        height: 100px;
+        width: 100px;
+    }
+        .dot{
+            height: 15px;
+            width: 15px;
+        }
+  }
+
+  @media screen and (min-width: 768px) {
+    ion-row {
+      font-size: 0.8em;
+    }
+    .score-wrapper{
+        margin: auto;
+        width: 150px;
+        font-size: 1rem;
+        height: 100px;
+        background-color: var(--primary-color);
+    }
+
+  }
+
+  @media screen and (min-width: 992px) {
+    ion-row {
+      font-size: 0.8em;
+    }
+
+    .playerone{
+        background-color: #F7F7F7;
+        height: 100vh;
+    }
+
+    .playertwo{
+        background-color: #FFFFFF;
+        height: 100vh;
+        }
+        .dice-roll{
+            position: fixed;
+            top: 50%;
+           left: 0;
+           right: 0;
+        }
+  }
+
+   .row_current{
+        height: 20%;
+    }
+    .row_score{
+        height: 60%;
+    }
+    .row_newgame{
+        height: 20%;
+    }
 
 .dice{
 position: relative;
-height: 150px;
-width: 150px;
 background: #FFFFFF;
 box-shadow: 1px 1px 15px 5px #727272;
-margin: auto;
+top:0;
+margin-left: auto;
+margin-right: auto;
 }
 
 
 .dot{
-    width: 20px;
-    height: 20px;
     border-radius: 20px;
-    background: #E55049; 
+    background:var(--primary-color); 
 }
 
 .one{
@@ -33,43 +137,73 @@ margin: auto;
 }
 .tr-one{
     position: absolute;
-    margin: 30px;
+    margin: 1rem;
     top: 0;
     right: 0;
 
 }
 .bl-one{
     position: absolute;
-    margin: 30px;
+    margin: 1rem;
     left: 0;
     bottom: 0;
 
 }
 .br-one{
     position: absolute;
-    margin: 30px;
+    margin: 1rem;
     right: 0;
     bottom: 0;
 
 }
 .tl-one{
     position: absolute;
-    margin: 30px;
+    margin: 1rem;
     top: 0;
     left: 0;
 
 }
 .ml-one{
     position: absolute;
-    margin-left: 30px;
+    margin-left: 1rem;
     top: 50%;
     transform: translateY(-50%);
 }
 .mr-one{
     position: absolute;
-    margin-right: 30px;
+    margin-right: 1rem;
     right:0;
     top: 50%;
     transform: translateY(-50%);
+}
 
+
+.player{
+    font-size: 4em;
+}
+.score{
+    font-size: 6em;
+    color:var(--primary-color);
+}
+.score-current{
+    font-size: 1.5em;
+    color:#FFFFFF;
+    font-weight:bolder;
+}
+
+.title-current{
+    font-size: 1.2em;
+    font-weight:bolder;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+ion-icon{
+    color: var(--primary-color);
+    font-size: 1.8em; 
+    margin: 10px;
 }
