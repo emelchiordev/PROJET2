@@ -1,6 +1,7 @@
 * {  
     --ion-font-family: 'Lato', sans-serif;
     --primary-color:#E55049;
+    font-weight: 900;
     padding: 0;
 
 }
@@ -8,15 +9,25 @@
 @media screen and (min-width: 0px) {
     ion-row {
       font-size: 0.4rem;
+      height: 47vh;
     }
+
     .playerone{
         background-color: #F7F7F7;
-        min-height: 50vh;
+ 
+
     }
+    
     .playertwo{
         background-color: #FFFFFF;
-        min-height: 50vh;
-        }
+   
+
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
         .score-wrapper{
             margin: auto;
             width: 100px;
@@ -34,10 +45,10 @@
             }
             .dice-roll{
                 position: fixed;
-                margin: 1rem;
-                right: 0;
-                bottom: 1rem;
-                transform: translateY(-50%);
+                transform: translateY(-47%);
+                top: 47%;
+               left: 0;
+               right: 0;
             }
         
 
@@ -47,6 +58,10 @@
     ion-row {
       font-size: 0.6rem;
     }
+    h1{
+        font-size: 3rem;
+    }
+
     .score-wrapper{
         margin: auto;
         width: 120px;
@@ -68,7 +83,12 @@
   @media screen and (min-width: 768px) {
     ion-row {
       font-size: 0.8em;
+     
     }
+    h1{
+        font-size: 3rem;
+    }
+
     .score-wrapper{
         margin: auto;
         width: 150px;
@@ -78,38 +98,65 @@
     }
 
   }
+.btn{
+    display: flex;
+    align-items: center;
+}
+
 
   @media screen and (min-width: 992px) {
     ion-row {
-      font-size: 0.8em;
+      font-size: 1em;
+      height: 10vh;
+
+    }
+    ion-grid{
+        background: linear-gradient(to left, #FFFFFF 50%, #F7F7F7 50%);
+        height: 100vh;
     }
 
+    .btn-bottom{
+       position: absolute;
+       top: 63vh;
+       left: 0;
+       right: 0;
+    }
+    .score-wrapper{
+        margin-top: 30vh;
+    }
+    .row_score{
+        height: 100%;
+    }
+
+
     .playerone{
+        
         background-color: #F7F7F7;
-        height: 100vh;
+        height: 80vh;
+    }
+
+    .playerone ion-col{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        font-size: 5rem;
     }
 
     .playertwo{
+ 
         background-color: #FFFFFF;
-        height: 100vh;
+        height: 80vh;
         }
         .dice-roll{
             position: fixed;
-            top: 50%;
+            top: 40vh;
            left: 0;
            right: 0;
         }
   }
 
-   .row_current{
-        height: 20%;
-    }
-    .row_score{
-        height: 60%;
-    }
-    .row_newgame{
-        height: 20%;
-    }
+
 
 .dice{
 position: relative;
