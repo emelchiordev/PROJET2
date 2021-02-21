@@ -21,52 +21,89 @@
 
                 <ion-row class="ion-hide-lg-down ion-align-items-center ">
                     <ion-col size="12" class="ion-hide-lg-down btn">
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                        <ion-label>NEW GAME</ion-label>
+                        <button class="btn btn-new">
+                            <ion-icon name="add-circle-outline"></ion-icon>NEW GAME
+                        </button>
                     </ion-col>
                 </ion-row>
 
-                <ion-row class="playerone ion-align-items-center ">
-
+                <ion-row class=" ion-align-items-center ">
                     <ion-col size="12" size-lg="6" class="playerone ion-text-center ">
-                        <h1>PLAYER 1 </h1>
-                        <div class="ion-text-center score">72</div>
-                        <div class="score-wrapper">
-                            <h1 class="title-current">CURRENT</h1>
-                            <p class="score-current">11</p>
-                        </div>
+                        <ion-row class="ion-align-items-center">
+                            <ion-col size='12'>
+                                <h1>PLAYER 1 <span class="dot dot-player"></span>
+                                </h1>
+                            </ion-col>
+                            <ion-col size='6' size-lg="12">
+                                <div class="ion-text-center score score-p1">0</div>
+                            </ion-col>
+                            <ion-col size="6" size-lg="12">
+                                <div class="score-wrapper">
+                                    <h1 class="title-current">CURRENT</h1>
+                                    <p class="score-current p1">0</p>
+                                </div>
+                            </ion-col>
+                        </ion-row>
                     </ion-col>
 
                     <ion-col size="12" size-lg="6" class="playertwo ion-text-center ion-hide-lg-down">
-                        <h1>PLAYER 2 </h1>
-                        <div class="ion-text-center score">72</div>
-                        <div class="score-wrapper">
-                            <h1 class="title-current">CURRENT</h1>
-                            <p class="score-current">11</p>
-                        </div>
+                        <ion-row class="ion-align-items-center">
+                            <ion-col size='12'>
+                                <h1>PLAYER 2 <span class="dot dot-player"></span>
+                                </h1>
+                            </ion-col>
+
+                            <ion-col size='6' size-lg="12">
+                                <div class="ion-text-center score score-p2">0</div>
+                            </ion-col>
+
+                            <ion-col size="6" size-lg="12">
+                                <div class="score-wrapper">
+                                    <h1 class="title-current">CURRENT</h1>
+                                    <p class="score-current p2">0</p>
+                                </div>
+                            </ion-col>
+                        </ion-row>
                     </ion-col>
+
 
                 </ion-row>
 
+
+
+
+
+
+
                 <ion-row class="playertwo ion-align-items-center ion-hide-lg-up">
                     <ion-col size="12" class="ion-text-center">
-                        <h1>PLAYER 1 </h1>
-                        <div class="ion-text-center score">72</div>
-                        <div class="score-wrapper">
-                            <h1 class="title-current">CURRENT</h1>
-                            <p class="score-current">11</p>
-                        </div>
+                        <ion-row class="ion-align-items-center">
+                            <ion-col size='12'>
+                                <h1>PLAYER 2 </h1>
+                            </ion-col>
+                            <ion-col size='6'>
+                                <div class="ion-text-center score score-p2">72</div>
+                            </ion-col>
+                            <ion-col size="6">
+                                <div class="score-wrapper">
+                                    <h1 class="title-current">CURRENT</h1>
+                                    <p class="score-current">11</p>
+                                </div>
+                            </ion-col>
+                        </ion-row>
                     </ion-col>
                 </ion-row>
 
                 <ion-row class="ion-hide-lg-down btn-bottom">
                     <ion-col size="12" class="ion-hide-lg-down btn">
-                        <ion-icon name="sync-outline"></ion-icon>
-                        <ion-label>ROLL DICE</ion-label>
+                        <button class="btn btn-roll">
+                            <ion-icon name="sync-outline"></ion-icon>ROLL DICE
+                        </button>
                     </ion-col>
                     <ion-col size="12" class="ion-hide-lg-down btn">
-                        <ion-icon name="download-outline"></ion-icon>
-                        <ion-label>HOLD</ion-label>
+                        <button class="btn btn-hold">
+                            <ion-icon name="download-outline"></ion-icon>HOLD
+                        </button>
                     </ion-col>
                 </ion-row>
                 <!-- ROW 1 NEW GAME-->
@@ -160,7 +197,6 @@
 
             </ion-grid>
 
-
         </ion-content>
 
         <ion-tabs class="ion-hide-lg-up">
@@ -183,7 +219,9 @@
             </ion-tab-bar>
 
         </ion-tabs>
+
     </ion-app>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
