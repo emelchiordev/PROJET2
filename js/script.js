@@ -41,8 +41,13 @@ const holdButton = document.querySelector(".btn-hold")
 //BIND VIEW ON PLAYER1 AND PLAYER2 CONTAINER AND HIDE DOT FOR PLAYER2
 const playerOneView = document.querySelector(".playerone")
 const playerTwoView = document.querySelector(".playertwo")
-playerTwoView.getElementsByTagName("span")[0].classList.add("ion-hide")
 const ionGrid = document.querySelector("ion-grid")
+
+//SET DEFAULT CURRENT DOT ON PLAYER1
+playerTwoView.getElementsByTagName("span")[0].classList.add("ion-hide")
+
+//BIND SIDE VIEW DICE
+const sideView = document.querySelector(".dice").getElementsByClassName("side")
 
 
 
@@ -90,6 +95,7 @@ const currentViewP2 = document.querySelector(".p2")
 const gameStart = () => {
 
     const random = Math.floor(Math.random() * 6 + 1)
+    changeSide(random)
 
     if (random === 1) {
         currentPlayer.setCurrentScore(0)
@@ -139,6 +145,15 @@ const changeCurrentPlayer = () => {
     currentPlayer = currentPlayer === player1 ? player2 : player1
     setStyleCurrentPlayer()
 
+}
+
+
+// CHANGE SIDE OF ROLL
+const changeSide = (sideNb) => {
+    for (let i = 0; i < 6; i++) {
+        sideView[i].classList.add("ion-hide")
+    }
+    sideView[sideNb - 1].classList.remove("ion-hide")
 }
 
 const setStyleCurrentPlayer = () => {
