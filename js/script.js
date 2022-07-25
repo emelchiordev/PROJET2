@@ -94,9 +94,13 @@ const currentViewP2 = document.querySelector(".p2")
 // GAME START WHEN CLICK ON ROLL DICE
 const gameStart = () => {
 
+    // ASSIGN A RANDOM NUMBER FROM 1 TO 6
     const random = Math.floor(Math.random() * 6 + 1)
+    
+    // DISPLAY THE SIDE OF THE DICE
     changeSide(random)
 
+    // IF THE NUMBER IS 1 THEN THE PLAYER LOSE HIS TURN
     if (random === 1) {
         currentPlayer.setCurrentScore(0)
         updateCurrentView(currentPlayer)
@@ -109,6 +113,8 @@ const gameStart = () => {
 
 }
 
+
+// Function that sends the player's points to their overall score
 const holdScore = () => {
     currentPlayer.setScore(currentPlayer.getScore() + currentPlayer.getCurrentScore())
     currentPlayer.setCurrentScore(0)
@@ -120,6 +126,7 @@ const holdScore = () => {
         currentViewP2.textContent = currentPlayer.getCurrentScore()
     }
 
+     // DISPLAY THE WINNER ON WINDOW
     if (currentPlayer.getScore() >= 100) {
         window.alert("GAME OVER ! \n" + "The Winner is : " + currentPlayer.getName());
         console.log("Le joueur" + currentPlayer.getName() + "a gagné")
